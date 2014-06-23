@@ -18,15 +18,6 @@
         android:layout_marginTop="118dp" >
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
-        android:text="ミル姉さんの一口メモ" />
-
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
@@ -66,9 +57,18 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_alignBottom="@+id/relativeLayout1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="16dp"
         android:text="一言を登録" />
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:text="ミル姉さんの一口メモ" />
 
 </RelativeLayout>
