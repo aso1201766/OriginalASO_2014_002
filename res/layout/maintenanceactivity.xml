@@ -9,26 +9,26 @@
         android:layout_height="match_parent" >
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/button1"
+            android:layout_alignBottom="@+id/btnmnt"
             android:layout_marginLeft="55dp"
-            android:layout_toRightOf="@+id/button1"
+            android:layout_toRightOf="@+id/btnmnt"
             android:text="Button" />
 
         <ListView
             android:id="@+id/listView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/button1"
+            android:layout_above="@+id/btnmnt"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true" >
 
         </ListView>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btnmnt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

@@ -19,7 +19,7 @@
     </RelativeLayout>
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/t_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/relativeLayout1"
@@ -27,28 +27,28 @@
         android:ems="10" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnmnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/t_text"
+        android:layout_below="@+id/t_text"
         android:layout_marginTop="37dp"
         android:text="メンテ" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText1"
+        android:layout_alignRight="@+id/t_text"
         android:layout_centerVertical="true"
         android:layout_marginRight="18dp"
         android:text="登録" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
+        android:layout_below="@+id/btnmnt"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:text="ひとことチェック" />

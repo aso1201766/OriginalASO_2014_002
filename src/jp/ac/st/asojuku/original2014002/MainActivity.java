@@ -1,15 +1,59 @@
 package jp.ac.st.asojuku.original2014002;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends Activity implements View.OnClickListener
+{
+	SQLiteDatabase sdb = null;
+	MySQLiteOpenHelper helper = null;
+
+
+	@Override
+	public void onClick(View v) {
+		// TODO 自動生成されたメソッド・スタブ
+		Intent intent = null;
+		switch(v.getId()){
+
+		case R.id.btnt:
+			EditText etv = (EditText)findViewById(R.id.t_text);
+			String inputMsg = etv.getText().toString();
+
+			if(inputMsg!=null && !inputMsg.isEmpty()){
+				helper.insertHitokoto(sdb,inputMsg);
+			}
+			etv.setText("");
+			break;
+		case R.id.btnmnt:
+			intent = new Intent(MainActivity.this,MaintenanceActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.btnc:
+			String strHitokoto = helper.selectRandomHitokoto(sdb);
+			intent = new Intent(MainActivity.this,HitokotoActivity.class);
+			intent.putExtra("hitokoto", strHitokoto);
+			startActivity(intent);
+			break;
+		}
+	}
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO 自動生成されたメソッド・スタブ
+		super.onResume();
 	}
 
 	@Override
