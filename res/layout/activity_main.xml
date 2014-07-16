@@ -27,7 +27,7 @@
         android:ems="10" />
 
     <Button
-        android:id="@+id/btnmnt"
+        android:id="@+id/btnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/t_text"
@@ -36,7 +36,7 @@
         android:text="メンテ" />
 
     <Button
-        android:id="@+id/btnt"
+        android:id="@+id/btnD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/t_text"
@@ -48,7 +48,7 @@
         android:id="@+id/btnc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnmnt"
+        android:layout_below="@+id/btnback"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:text="ひとことチェック" />

@@ -24,9 +24,9 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO 自動生成されたメソッド・スタブ
-		db.execSQL("CREATE TABLE IF NOT EXISTS" + 
+		db.execSQL("CREATE TABLE IF NOT EXISTS" +
 					"Hitokoto(_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , phrase TEXT)");
-		
+
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	 * @param inputNsz インサートするメッセージ
 	 */
 	public void insertHitokoto(SQLiteDatabase db, String inputMsg){
-		
+
 		String sqlstr = "insert into Hitokoto (phrase)valuse(' "+ inputMsg + " ');";
 			try{
 				//トランザクション開始
@@ -59,18 +59,18 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 				db.endTransaction();
 			}
 		return;
-		
+
 	}
-	
+
 	/**
 	 * 引数のフレーズをHitokotoテーブルにインサートするプライベートメソッド
 	 * @param SQLiteDatabase インサート先DBのインスタンス変数
 	 * @param inputMsg インサートするメッセージ
 	 */
 	public String selectRandomHitokoto(SQLiteDatabase db){
-		
+
 		String rtString = null;
-		
+
 		String sqlstr = "SELECT _id, phrase FROM Hitokoto ORDER BY RANDOM();";
 				try{
 					//トランザクション開始
@@ -81,7 +81,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 						rtString = cursor.getString(1);
 					}
 					cursor.close();
-					
+
 				}
 		catch(SQLException e){
 			Log.e("ERROR",e.toString());
@@ -90,7 +90,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 			//すでにカーソルもcloseしてあるので、何もしない
 		}
 		return rtString;
-		
+
 	}
-	
+
 }

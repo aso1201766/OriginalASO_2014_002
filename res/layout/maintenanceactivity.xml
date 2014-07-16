@@ -9,33 +9,33 @@
         android:layout_height="match_parent" >
 
         <Button
-            android:id="@+id/btnt"
+            android:id="@+id/btnD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/btnmnt"
+            android:layout_alignBottom="@+id/btnback"
             android:layout_marginLeft="55dp"
-            android:layout_toRightOf="@+id/btnmnt"
-            android:text="Button" />
+            android:layout_toRightOf="@+id/btnback"
+            android:text="削除" />
 
         <ListView
             android:id="@+id/listView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btnmnt"
+            android:layout_above="@+id/btnback"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true" >
 
         </ListView>
 
         <Button
-            android:id="@+id/btnmnt"
+            android:id="@+id/btnback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_marginBottom="39dp"
             android:layout_marginLeft="56dp"
-            android:text="Button" />
+            android:text="BACK" />
 
     </RelativeLayout>
 
